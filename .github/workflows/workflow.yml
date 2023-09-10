@@ -1,0 +1,19 @@
+on: [push]
+
+jobs: 
+  my-job:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Run the action
+        uses: actions/checkout@v3
+        id: hello
+        uses: ./github/actions/container-actions
+        with:
+          myInput: "James Smith"
+      - name: Output
+        run: |
+          echo ${{ steps.hello.outputs.memory }}
+          echo "total memory successful output"
+      
+
