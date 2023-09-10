@@ -9,7 +9,7 @@ jobs:
         uses: actions/checkout@v3
       - name: Run action
         id: hello
-        uses: ./github/actions/container-actions
+        uses: ./.github/actions/container-actions
         with:
           myInput: "James Smith"
       - name: Output
