@@ -5,8 +5,9 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Run the action
+      - name: Checkout
         uses: actions/checkout@v3
+      - name: Run action
         id: hello
         uses: ./github/actions/container-actions
         with:
